@@ -1,10 +1,14 @@
 Package: geodist
 Title: GeoDist datasets in R
 Version: 0.0.0.9000
-Authors@R: person("Mauricio", "Vargas", 
-    role = c("aut","cre"),
-    email = "mvargas@dcc.uchile.cl", 
-    comment = c(ORCID = "0000-0003-1017-7574"))
+Authors@R: c(
+    person("Mauricio", "Vargas", 
+     role = c("aut","cre"),
+     email = "mvargas@dcc.uchile.cl", 
+     comment = c(ORCID = "0000-0003-1017-7574")),
+    person(family = "Centre d'études prospectives et d'informations internationales (CEPII)",
+     role = "dtc")
+    )
 Description: What the package does (one paragraph).
 License: CC0
 Encoding: UTF-8
