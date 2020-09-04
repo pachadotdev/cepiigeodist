@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Data on countries and their main city or agglomeration — geo_cepii • geodist</title>
+<title>Data on countries and their main city or agglomeration — geo_cepii • cepiigeodist</title>
 
 
 <!-- jquery -->
@@ -71,8 +71,8 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">geodist</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <a class="navbar-link" href="../index.html">cepiigeodist</a>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1</span>
       </span>
     </div>
 
@@ -89,7 +89,12 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/pachamaltese/cepiigeodist/">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -168,26 +173,26 @@
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># filter to avoid multiple records for the same country</span>
-<span class='no'>geo_cepii</span>[<span class='no'>geo_cepii</span>$<span class='no'>cap</span> <span class='kw'>==</span> <span class='fl'>1</span> <span class='kw'>&amp;</span> <span class='no'>geo_cepii</span>$<span class='no'>maincity</span> <span class='kw'>==</span> <span class='fl'>1</span>, ]</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 212 x 34</span><span>
+<span class='no'>geo_cepii</span>[<span class='no'>geo_cepii</span>$<span class='no'>cap</span> <span class='kw'>==</span> <span class='fl'>1</span> <span class='kw'>&amp;</span> <span class='no'>geo_cepii</span>$<span class='no'>maincity</span> <span class='kw'>==</span> <span class='fl'>1</span>, ]</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 212 x 34</span><span>
 #&gt;    iso2  iso3   cnum country pays    area dis_int landlocked continent city_en
-#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>      </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>  
-#&gt; </span><span style='color: #BCBCBC;'> 1</span><span> AW    ABW     533 Aruba   Aruba 1.93</span><span style='color: #949494;'>e</span><span>2    5.23          0 America   Oranje…
-#&gt; </span><span style='color: #BCBCBC;'> 2</span><span> AF    AFG       4 Afghan… Afgh… 6.52</span><span style='color: #949494;'>e</span><span>5  304.            1 Asia      Kabul  
-#&gt; </span><span style='color: #BCBCBC;'> 3</span><span> AO    AGO      24 Angola  Ango… 1.25</span><span style='color: #949494;'>e</span><span>6  420.            0 Africa    Luanda 
-#&gt; </span><span style='color: #BCBCBC;'> 4</span><span> AI    AIA     660 Anguil… Angu… 1.02</span><span style='color: #949494;'>e</span><span>2    3.80          0 America   The Va…
-#&gt; </span><span style='color: #BCBCBC;'> 5</span><span> AL    ALB       8 Albania Alba… 2.87</span><span style='color: #949494;'>e</span><span>4   63.8           0 Europe    Tirana 
-#&gt; </span><span style='color: #BCBCBC;'> 6</span><span> AD    AND      20 Andorra Ando… 4.53</span><span style='color: #949494;'>e</span><span>2    8.01          0 Europe    Andorr…
-#&gt; </span><span style='color: #BCBCBC;'> 7</span><span> AN    ANT     530 Nether… Anti… 9.60</span><span style='color: #949494;'>e</span><span>2   11.7           0 America   Willem…
-#&gt; </span><span style='color: #BCBCBC;'> 8</span><span> AE    ARE     784 United… Emir… 8.37</span><span style='color: #949494;'>e</span><span>4  109.            0 Asia      Abu Dh…
-#&gt; </span><span style='color: #BCBCBC;'> 9</span><span> AR    ARG      32 Argent… Arge… 2.77</span><span style='color: #949494;'>e</span><span>6  626.            0 America   Buenos…
-#&gt; </span><span style='color: #BCBCBC;'>10</span><span> AM    ARM      51 Armenia Armé… 2.98</span><span style='color: #949494;'>e</span><span>4   64.9           1 Asia      Yerevan
-#&gt; </span><span style='color: #949494;'># … with 202 more rows, and 24 more variables: city_fr </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, lat </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #949494;'>,</span><span>
-#&gt; </span><span style='color: #949494;'>#   lon </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #949494;'>, cap </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #949494;'>, maincity </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #949494;'>, citynum </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, langoff_1 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,</span><span>
-#&gt; </span><span style='color: #949494;'>#   langoff_2 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, langoff_3 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, lang20_1 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, lang20_2 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,</span><span>
-#&gt; </span><span style='color: #949494;'>#   lang20_3 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, lang20_4 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, lang9_1 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, lang9_2 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,</span><span>
-#&gt; </span><span style='color: #949494;'>#   lang9_3 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, lang9_4 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, colonizer1 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, colonizer2 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,</span><span>
-#&gt; </span><span style='color: #949494;'>#   colonizer3 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, colonizer4 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, short_colonizer1 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>,</span><span>
-#&gt; </span><span style='color: #949494;'>#   short_colonizer2 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span style='color: #949494;'>, short_colonizer3 </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span></div></span></pre>
+#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  
+#&gt; </span><span style='color: #555555;'> 1</span><span> AW    ABW     533 Aruba   Aruba 1.93</span><span style='color: #555555;'>e</span><span>2    5.23          0 America   Oranje~
+#&gt; </span><span style='color: #555555;'> 2</span><span> AF    AFG       4 Afghan~ Afgh~ 6.52</span><span style='color: #555555;'>e</span><span>5  304.            1 Asia      Kabul  
+#&gt; </span><span style='color: #555555;'> 3</span><span> AO    AGO      24 Angola  Ango~ 1.25</span><span style='color: #555555;'>e</span><span>6  420.            0 Africa    Luanda 
+#&gt; </span><span style='color: #555555;'> 4</span><span> AI    AIA     660 Anguil~ Angu~ 1.02</span><span style='color: #555555;'>e</span><span>2    3.80          0 America   The Va~
+#&gt; </span><span style='color: #555555;'> 5</span><span> AL    ALB       8 Albania Alba~ 2.87</span><span style='color: #555555;'>e</span><span>4   63.8           0 Europe    Tirana 
+#&gt; </span><span style='color: #555555;'> 6</span><span> AD    AND      20 Andorra Ando~ 4.53</span><span style='color: #555555;'>e</span><span>2    8.01          0 Europe    Andorr~
+#&gt; </span><span style='color: #555555;'> 7</span><span> AN    ANT     530 Nether~ Anti~ 9.60</span><span style='color: #555555;'>e</span><span>2   11.7           0 America   Willem~
+#&gt; </span><span style='color: #555555;'> 8</span><span> AE    ARE     784 United~ Emir~ 8.37</span><span style='color: #555555;'>e</span><span>4  109.            0 Asia      Abu Dh~
+#&gt; </span><span style='color: #555555;'> 9</span><span> AR    ARG      32 Argent~ Arge~ 2.77</span><span style='color: #555555;'>e</span><span>6  626.            0 America   Buenos~
+#&gt; </span><span style='color: #555555;'>10</span><span> AM    ARM      51 Armenia Armé~ 2.98</span><span style='color: #555555;'>e</span><span>4   64.9           1 Asia      Yerevan
+#&gt; </span><span style='color: #555555;'># ... with 202 more rows, and 24 more variables: city_fr </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, lat </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   lon </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, cap </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, maincity </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span style='color: #555555;'>, citynum </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, langoff_1 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   langoff_2 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, langoff_3 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, lang20_1 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, lang20_2 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   lang20_3 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, lang20_4 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, lang9_1 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, lang9_2 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   lang9_3 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, lang9_4 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, colonizer1 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, colonizer2 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   colonizer3 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, colonizer4 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, short_colonizer1 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   short_colonizer2 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, short_colonizer3 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

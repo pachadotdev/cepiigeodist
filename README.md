@@ -1,15 +1,21 @@
-# geodist
+# cepiigeodist
 
 <!-- badges: start -->
 <!-- badges: end -->
 
 The goal of geodist is to provide the same data from [GeoDist](http://www.cepii.fr/CEPII/en/bdd_modele/download.asp?id=6) ready to be used in R (i.e. with the [gravity](https://pacha.dev/gravity) package).
 
+The package provides data on countries and their main city or agglomeration and
+the different distance measures and dummy variables indicating whether two
+countries are contiguous, share a common language or a colonial
+relationship.
+    
+
 `geodist` can be installed by running
 
 ```
 # install.packages("remotes")
-install_github("pachamaltese/geodist")
+install_github("pachamaltese/cepiigeodist")
 ```
 
 The main source to obtain the data in this package is:

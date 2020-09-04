@@ -1,6 +1,6 @@
-Package: geodist
-Title: GeoDist datasets in R
-Version: 0.0.0.9000
+Package: cepiigeodist
+Title: CEPII's GeoDist datasets in R
+Version: 0.1
 Authors@R: c(
     person("Mauricio", "Vargas", 
      role = c("aut","cre"),
@@ -9,7 +9,11 @@ Authors@R: c(
     person(family = "Centre d'études prospectives et d'informations internationales (CEPII)",
      role = "dtc")
     )
-Description: What the package does (one paragraph).
+Description: Provides data on countries and their main city or agglomeration and
+    the different distance measures and dummy variables indicating whether two
+    countries are contiguous, share a common language or a colonial
+    relationship. The reference article for these datasets is Mayer and Zignago
+    (2011).
 License: CC0
 Encoding: UTF-8
 LazyData: true
@@ -17,3 +21,7 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Depends: 
     R (>= 2.10)
+URL: https://pacha.dev/cepiigeodist
+BugReports: https://github.com/pachamaltese/cepiigeodist/issues
+Suggests: 
+    gravity
