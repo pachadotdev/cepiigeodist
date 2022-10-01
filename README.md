@@ -3,7 +3,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of geodist is to provide the same data from [GeoDist](http://www.cepii.fr/CEPII/en/bdd_modele/download.asp?id=6) ready to be used in R (i.e. with the [gravity](https://pacha.dev/gravity) package).
+The goal of cepiigeodist is to provide the same data from [GeoDist](http://www.cepii.fr/CEPII/en/bdd_modele/download.asp?id=6) ready to be used in R (i.e. with the [gravity](https://pacha.dev/gravity) package).
 
 The package provides data on countries and distance measures alongside dummy variables indicating whether two countries are contiguous, share a common language or a colonial relationship, and others.
 
