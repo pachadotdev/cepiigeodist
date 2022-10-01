@@ -7,7 +7,7 @@ The goal of cepiigeodist is to provide the same data from [GeoDist](http://www.c
 
 The package provides data on countries and distance measures alongside dummy variables indicating whether two countries are contiguous, share a common language or a colonial relationship, and others.
 
-`geodist` can be installed by running
+`cepiigeodist` can be installed by running
 
 ```
 # install.packages("remotes")
