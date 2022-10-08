@@ -11,7 +11,7 @@ The package provides data on countries and distance measures alongside dummy var
 
 ```
 # install.packages("remotes")
-install_github("pachamaltese/cepiigeodist")
+install_github("pachadotdev/cepiigeodist")
 ```
 
 The main source to obtain the data in this package is:
